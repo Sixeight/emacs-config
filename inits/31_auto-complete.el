@@ -45,6 +45,7 @@
   (global-company-mode 1))
 
 ;; あらぬ場所に表示されてしまう
+;; company-quickhelp (https://github.com/expez/company-quickhelp)
 ;; (el-get-bundle pos-tip)
 ;; (el-get-bundle company-quickhelp
 ;;   (company-quickhelp-mode 1))
@@ -53,9 +54,10 @@
   (require 'company-statistics)
   (company-statistics-mode))
 
-(el-get-bundle ac-html)
-(el-get-bundle osv/company-web
-  (require 'company-web-html))
+;; company-web (https://github.com/osv/company-web)
+;; (el-get-bundle ac-html)
+;; (el-get-bundle osv/company-web
+;;   (require 'company-web-html))
 
 ;; デフォルトのキーバインドを無効化
 (define-key company-active-map (kbd "M-n") nil)
