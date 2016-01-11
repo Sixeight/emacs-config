@@ -214,10 +214,9 @@
 (setq make-backup-files nil)
 
 ;; wdired (dired上で直接編集できる)
+(require 'dired)
 (require 'wdired)
-(eval-after-load "dired"
-  '(lambda ()
-     (define-key dired-mode-map (kdb "r") 'wdired-change-to-wdired-mode)))
+(define-key dired-mode-map "e" 'wdired-change-to-wdired-mode)
 
 ;; 同名のファイルをうまく扱う
 (require 'uniquify)
