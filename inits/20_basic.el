@@ -183,6 +183,9 @@
 ;; 範囲選択中にバックスペースで選択範囲を削除する
 (delete-selection-mode t)
 
+;; キーストロークをエコーエリアに早く表示する
+(setq echo-keystrokes 0.1)
+
 ;; 行番号を(常に)表示する
 (global-linum-mode 1)
 (setq linum-format "%4d ")
