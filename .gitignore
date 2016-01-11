@@ -40,3 +40,5 @@ tramp
 /eshell
 /var
 /recentf
+/ac-comphist.dat
+/company-statistics-cache.el
