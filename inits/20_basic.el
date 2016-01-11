@@ -161,9 +161,9 @@
 ;;ログの記録行数を増やす
 (setq message-log-max 10000)
 
-;; recentfの保存件数は無限
+;; recentfの保存件数を増やす
 (require 'recentf)
-(setq recentf-max-saved-items nil)
+(setq recentf-max-saved-items 10000)
 
 ;; kill-ring に同じ内容の文字列を複数入れない
 (defadvice kill-new (before ys:no-kill-new-duplicates activate)
