@@ -161,9 +161,15 @@
 ;;ログの記録行数を増やす
 (setq message-log-max 10000)
 
-;; recentfの保存件数を増やす
+;; recentf
 (require 'recentf)
+(setq recentf-save-file "~/.emacs.d/.recentf")
 (setq recentf-max-saved-items 10000)
+(setq recentf-exclude '(".recentf"))
+(setq recentf-auto-cleanup 10)
+;; 30秒毎に.recentfを保存する
+(run-with-idle-timer 30 t 'recentf-save-list)
+(el-get-bundle! recentf-ext)
 
 ;; kill-ring に同じ内容の文字列を複数入れない
 (defadvice kill-new (before ys:no-kill-new-duplicates activate)

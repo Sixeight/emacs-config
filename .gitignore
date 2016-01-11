@@ -39,6 +39,6 @@ tramp
 /elpa
 /eshell
 /var
-/recentf
+/.recentf
 /ac-comphist.dat
 /company-statistics-cache.el
