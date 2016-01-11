@@ -17,7 +17,6 @@
   (require 'company)
   (setq company-tooltip-limit 5)
   (setq company-tooltip-align-annotations nil)
-  (setq company-tooltip-delay 0)
   (setq company-idle-delay 0.05)
   (setq company-echo-delay 0)
   (setq company-minimum-prefix-length 1)
