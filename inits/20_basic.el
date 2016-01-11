@@ -97,6 +97,7 @@
 (column-number-mode t)
 
 ;;; status-barに時間表示
+(require 'time)
 (setq display-time-24hr-format t)
 (setq display-time-day-and-date t)
 (setq display-time-string-forms
@@ -116,6 +117,7 @@
 (setq kill-whole-line t)
 
 ;; 対応する括弧を光らせる
+(require 'paren)
 (show-paren-mode 1)
 (setq show-paren-delay 0.5)
 (setq show-paren-style 'expression)
@@ -187,6 +189,7 @@
 (setq echo-keystrokes 0.1)
 
 ;; 行番号を(常に)表示する
+(require 'linum)
 (global-linum-mode 1)
 (setq linum-format "%4d ")
 
