@@ -1,6 +1,8 @@
 
-;; auto-complete (https://github.com/auto-complete/auto-complete)
+;; fuzzy
+;; (el-get-bundle! fuzzy)
 
+;; auto-complete (https://github.com/auto-complete/auto-complete)
 ;; (el-get-bundle! auto-complete
 ;;   (ac-config-default)
 ;;   (setq ac-dwim t)
@@ -39,15 +41,19 @@
 (set-face-attribute 'company-scrollbar-bg nil
                     :background "gray40")
 
-;; C-n, C-pで補完候補を次/前の候補を選択
+;; デフォルトのキーバインドを無効化
 (define-key company-active-map (kbd "M-n") nil)
 (define-key company-active-map (kbd "M-p") nil)
 (define-key company-active-map (kbd "C-h") nil)
+
+;; C-iで展開
+(define-key company-active-map (kbd "C-i") 'company-complete-selection)
+
+;; C-p/C-nで候補を移動
 (define-key company-active-map (kbd "C-n") 'company-select-next)
 (define-key company-active-map (kbd "C-p") 'company-select-previous)
-(define-key company-active-map (kbd "C-i") 'company-complete-selection)
 (define-key company-search-map (kbd "C-n") 'company-select-next)
 (define-key company-search-map (kbd "C-p") 'company-select-previous)
 
-;; C-sで絞り込む
+;; M-sで絞り込む
 (define-key company-active-map (kbd "M-s") 'company-filter-candidates)
