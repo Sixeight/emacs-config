@@ -40,6 +40,7 @@
 (global-set-key (kbd "C-c i") 'helm-imenu)
 (global-set-key (kbd "C-c C-c") 'helm-resume)
 (global-set-key (kbd "C-c o") 'helm-occur)
+(global-set-key (kbd "C-c O") 'helm-occur-from-isearch)
+(define-key helm-map (kbd "C-c C-a") 'all-from-helm-occur)
 (global-set-key (kbd "C-c a") 'helm-do-ag-project-root)
 (global-set-key (kbd "C-c A") 'helm-do-ag)
-(define-key helm-map (kbd "C-c C-a") 'all-from-helm-occur)
