@@ -49,6 +49,15 @@
 ;; 行間
 (setq-default line-spacing 0.0)
 
+;;windowの設定
+(setq default-frame-alist
+      (append (list
+               '(width . 184)
+               '(height . 50)
+               '(top . 0)
+               '(left . 0))
+              default-frame-alist))
+
 ;; 背景を半透明にする
 (if window-system
     (set-frame-parameter nil 'alpha 95))
