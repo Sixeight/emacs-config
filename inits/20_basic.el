@@ -4,8 +4,17 @@
 (unless (server-running-p)
         (server-start))
 
-;; default encodingをutf-8に変更
+;; 文字コードの設定
+(setq buffer-file-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-clipboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(set-language-environment 'utf-8)
 (set-default-coding-systems 'utf-8)
+(set-language-environment "Japanese")
+(setq locale-coding-system 'utf-8)
 
 ;; 日本語
 (setq current-language-environment "Japanese")
