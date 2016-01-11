@@ -99,7 +99,7 @@
 
 ;; 対応する括弧を光らせる
 (show-paren-mode 1)
-(setq show-paren-delay 0)
+(setq show-paren-delay 0.5)
 (setq show-paren-style 'expression)
 (set-face-attribute 'show-paren-match-face nil
                     :background "#385056" :foreground nil
