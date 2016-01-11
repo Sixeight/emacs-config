@@ -62,3 +62,9 @@
 
 ;; zsh
 (add-to-list 'auto-mode-alist '("\\.zsh$" . sh-mode))
+
+;; markdown
+(el-get-bundle markdown-mode
+  (autoload 'markdown-mode "markdown-mode"
+    "Major mode for editing Markdown files" t)
+  (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode)))
