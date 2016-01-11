@@ -11,6 +11,15 @@
 (el-get-bundle helm-ls-git)
 (el-get-bundle helm-ag)
 (el-get-bundle helm-open-github)
+;; helm-swoop (https://github.com/ShingoFukuyama/helm-swoop)
+(el-get-bundle! helm-swoop
+  (setq helm-multi-swoop-edit-save t)
+  (setq helm-swoop-split-with-multiple-windows nil)
+  (setq helm-swoop-split-direction 'split-window-vertically)
+  (setq helm-swoop-speed-or-color nil)
+  (setq helm-swoop-move-to-line-cycle t)
+  (setq helm-swoop-use-line-number-face t)
+  (helm-migemo-mode 1))
 ;; helm-source-ghq を利用するのにrequireする
 (el-get-bundle! helm-ghq)
 
@@ -37,6 +46,8 @@
 (global-set-key (kbd "C-c ]") 'helm-etags-select)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
+(global-set-key (kbd "C-c s") 'helm-swoop)
+(define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
 (global-set-key (kbd "C-c i") 'helm-imenu)
 (global-set-key (kbd "C-c C-c") 'helm-resume)
 (global-set-key (kbd "C-c o") 'helm-occur)
