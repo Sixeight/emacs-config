@@ -165,7 +165,13 @@
 (require 'recentf)
 (setq recentf-save-file "~/.emacs.d/.recentf")
 (setq recentf-max-saved-items 10000)
-(setq recentf-exclude '(".recentf"))
+(setq recentf-exclude
+      (append recentf-exclude
+              '("/.emacs.d/el-get/" "~$" "/.autosaves/"
+                "/emacs.d/elpa/" "/emacs.d/url/"
+                "/.emacs.d/.recentf"
+                "/.emacs.d/company-statistics-cache.el")))
+
 (setq recentf-auto-cleanup 10)
 ;; 30秒毎に.recentfを保存する
 (run-with-idle-timer 30 t 'recentf-save-list)
