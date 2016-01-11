@@ -19,6 +19,8 @@
   (setq helm-swoop-speed-or-color nil)
   (setq helm-swoop-move-to-line-cycle t)
   (setq helm-swoop-use-line-number-face t)
+  (define-key isearch-mode-map (kbd "C-o") 'helm-swoop-from-isearch)
+  (define-key helm-swoop-map (kbd "C-o") 'helm-multi-swoop-all-from-helm-swoop)
   (helm-migemo-mode 1))
 ;; helm-source-ghq を利用するのにrequireする
 (el-get-bundle! helm-ghq)
@@ -47,7 +49,6 @@
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-c s") 'helm-swoop)
-(define-key isearch-mode-map (kbd "M-i") 'helm-swoop-from-isearch)
 (global-set-key (kbd "C-c i") 'helm-imenu)
 (global-set-key (kbd "C-c C-c") 'helm-resume)
 (global-set-key (kbd "C-c o") 'helm-occur)
