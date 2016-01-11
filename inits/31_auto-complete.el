@@ -15,31 +15,47 @@
 ;; company-mode (https://github.com/company-mode/company-mode)
 (el-get-bundle company-mode/company-mode
   (require 'company)
+  (setq company-tooltip-limit 20)
+  (setq company-tooltip-align-annotations 't)
   (setq company-idle-delay 0.05)
+  (setq company-echo-delay 0)
   (setq company-minimum-prefix-length 1)
   (setq company-selection-wrap-around t)
+  (setq company-begin-commands '(self-insert-command))
+  (set-face-attribute 'company-tooltip nil
+                      :foreground "black"
+                      :background "lightgrey")
+  (set-face-attribute 'company-tooltip-common nil
+                      :foreground "black"
+                      :background "lightgrey")
+  (set-face-attribute 'company-tooltip-common-selection nil
+                      :foreground "white"
+                      :background "steelblue")
+  (set-face-attribute 'company-tooltip-selection nil
+                      :foreground "black"
+                      :background "steelblue")
+  (set-face-attribute 'company-preview-common nil
+                      :background nil
+                      :foreground "lightgrey"
+                      :underline t)
+  (set-face-attribute 'company-scrollbar-fg nil
+                      :background "orange")
+  (set-face-attribute 'company-scrollbar-bg nil
+                      :background "gray40")
   (global-company-mode 1))
 
-(set-face-attribute 'company-tooltip nil
-                    :foreground "black"
-                    :background "lightgrey")
-(set-face-attribute 'company-tooltip-common nil
-                    :foreground "black"
-                    :background "lightgrey")
-(set-face-attribute 'company-tooltip-common-selection nil
-                    :foreground "white"
-                    :background "steelblue")
-(set-face-attribute 'company-tooltip-selection nil
-                    :foreground "black"
-                    :background "steelblue")
-(set-face-attribute 'company-preview-common nil
-                    :background nil
-                    :foreground "lightgrey"
-                    :underline t)
-(set-face-attribute 'company-scrollbar-fg nil
-                    :background "orange")
-(set-face-attribute 'company-scrollbar-bg nil
-                    :background "gray40")
+;; あらぬ場所に表示されてしまう
+;; (el-get-bundle pos-tip)
+;; (el-get-bundle company-quickhelp
+;;   (company-quickhelp-mode 1))
+
+(el-get-bundle company-mode/company-statistics
+  (require 'company-statistics)
+  (company-statistics-mode))
+
+(el-get-bundle ac-html)
+(el-get-bundle osv/company-web
+  (require 'company-web-html))
 
 ;; デフォルトのキーバインドを無効化
 (define-key company-active-map (kbd "M-n") nil)
