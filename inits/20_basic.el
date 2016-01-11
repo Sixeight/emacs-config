@@ -41,8 +41,8 @@
 (setq-default line-spacing 0.0)
 
 ;; 背景を半透明にする
-;; (if window-system
-;;     (set-frame-parameter nil 'alpha 95))
+(if window-system
+    (set-frame-parameter nil 'alpha 95))
 
 ;; 画面最大化 (nativeのフルスクリーン使わない)
 (setq ns-use-native-fullscreen nil)
