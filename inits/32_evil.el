@@ -29,6 +29,10 @@
   (define-key evil-normal-state-map (kbd "C-a") 'back-to-indentation)
   (define-key evil-normal-state-map (kbd "C-w C-h") 'windmove-left)
   (define-key evil-normal-state-map (kbd "<C-return>") 'evil-ex-nohighlight)
+  (defun find-tag-next ()
+    (interactive)
+    (find-tag last-tag t))
+  (define-key evil-normal-state-map (kbd "C-}") 'find-tag-next)
   ;; for tab
   (define-key evil-normal-state-map (kbd "g n") 'elscreen-create)
   (define-key evil-normal-state-map (kbd "g h") 'elscreen-previous)
