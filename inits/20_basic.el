@@ -35,16 +35,16 @@
 ;; font
 (set-face-attribute 'default nil
                     :family "Monaco"
-                    :height 140)
+                    :height 136)
 
 ;; 行間
-(setq-default line-spacing 0.1)
+(setq-default line-spacing 0.05)
 
 ;;windowの設定
 (setq default-frame-alist
       (append (list
-               '(width . 184)
-               '(height . 50)
+               '(width . 208)
+               '(height . 80)
                '(top . 0)
                '(left . 0))
               default-frame-alist))
