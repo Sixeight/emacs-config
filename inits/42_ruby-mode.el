@@ -15,14 +15,15 @@
              (setq ruby-insert-encoding-magic-comment nil)))
 
 ;; ruby-block
-(el-get-bundle! ruby-block
-  (setq ruby-block-highlight-toggle t))
+;; (el-get-bundle! ruby-block
+;;   (setq ruby-block-highlight-toggle t)
+;;   (ruby-block-mode 0))
 
 (el-get-bundle! rbenv
   (setq rbenv-show-active-ruby-in-modeline nil)
   (global-rbenv-mode))
 
 ;; flycheck and smartparens
-(add-hook 'ruby-mode-hook 'flycheck-mode)
-(add-hook 'ruby-mode-hook 'smartparens-mode)
-(add-hook 'ruby-mode-hook 'ruby-block-mode)
+;; (add-hook 'ruby-mode-hook 'flycheck-mode)
+;; (add-hook 'ruby-mode-hook 'smartparens-mode)
+;; (add-hook 'ruby-mode-hook 'ruby-block-mode)
