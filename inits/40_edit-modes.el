@@ -20,7 +20,7 @@
               (company-mode-on))))
 
 ;; we-mode (https://github.com/fxbois/web-mode)
-(el-get-bundle! 'web-mode
+(el-get-bundle! web-mode
   (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
   (defcustom web-mode-engines-alist nil
     "engines"
@@ -37,6 +37,7 @@
   (add-hook 'web-mode-hook
             '(lambda ()
                (setq web-mode-markup-indent-offset 2)
+               (linum-mode 0)
                (define-key web-mode-map (kbd "C-c /") 'web-mode-element-close-and-indent)
                (define-key web-mode-map (kbd "T") (smartchr '("T" "[%- `!!' %]" "[% `!!' %]"))))))
 
