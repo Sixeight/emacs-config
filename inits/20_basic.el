@@ -155,7 +155,7 @@
 ;; recentf
 (require 'recentf)
 (setq recentf-save-file "~/.emacs.d/.recentf")
-(setq recentf-max-saved-items 10000)
+(setq recentf-max-saved-items 10000000)
 (setq recentf-exclude
       (append recentf-exclude
               '("/.emacs.d/el-get/" "~$" "/.autosaves/"
@@ -163,9 +163,9 @@
                 "/.emacs.d/.recentf"
                 "/.emacs.d/company-statistics-cache.el")))
 
-(setq recentf-auto-cleanup 10)
+(setq recentf-auto-cleanup 'never)
 ;; 30秒毎に.recentfを保存する
-(run-with-idle-timer 30 t 'recentf-save-list)
+;; (run-with-idle-timer 30 t 'recentf-save-list)
 (el-get-bundle! recentf-ext)
 
 ;; kill-ring に同じ内容の文字列を複数入れない
