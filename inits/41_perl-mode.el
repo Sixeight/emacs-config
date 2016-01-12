@@ -102,7 +102,7 @@
 (flycheck-define-checker perl-project-libs
   "A perl syntax checker."
   :command ("perl"
-            "-MProject::Libs lib_dirs => [qw(local/lib/perl5), glob(qw(modules/*/lib))]"
+            "-MProject::Libs lib_dirs => [qw(local/lib/perl5), glob(qw(modules/*/lib)), glob(qw(t/*/lib))]"
             "-wc"
             source-inplace)
   :error-patterns ((error line-start
