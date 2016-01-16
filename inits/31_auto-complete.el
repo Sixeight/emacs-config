@@ -15,6 +15,7 @@
 ;; company-mode (https://github.com/company-mode/company-mode)
 (el-get-bundle company-mode/company-mode
   (require 'company)
+  (setq company-tooltip-minimum-width 30)
   (setq company-tooltip-limit 5)
   (setq company-tooltip-align-annotations nil)
   (setq company-idle-delay 0.05)
