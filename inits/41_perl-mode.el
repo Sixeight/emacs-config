@@ -82,7 +82,7 @@
     (kill-new (concat "use " module-name ";"))
     (popwin:popup-buffer (current-buffer) :height 0.4)
     (re-search-backward "^use " nil t)
-    (next-line)))
+    (forward-line)))
 
 ;; required: cpanm Test::UsedModules
 ;; TODO: qでquickrunのbufferを閉じたい
