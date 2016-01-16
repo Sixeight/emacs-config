@@ -23,6 +23,7 @@
   (setq company-minimum-prefix-length 1)
   (setq company-selection-wrap-around t)
   (setq company-begin-commands '(self-insert-command))
+  (setq company-search-regexp-function #'company-search-words-regexp)
   (set-face-attribute 'company-tooltip nil
                       :foreground "black"
                       :background "lightgrey")
