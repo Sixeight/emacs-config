@@ -173,10 +173,10 @@
   (setq kill-ring (delete (ad-get-arg 0) kill-ring)))
 
 ;; スクロールバーは表示しない
-(scroll-bar-mode 0)
+(scroll-bar-mode -1)
 
 ;; ツールバーを非表示にする
-(tool-bar-mode 0)
+(tool-bar-mode -1)
 
 ;; メニューバーにファイルパスを表示
 (setq frame-title-format
@@ -195,6 +195,9 @@
 (require 'linum)
 (global-linum-mode 1)
 (setq linum-format "%4d ")
+(setq linum-delay t)
+(defadvice linum-schedule (around my-linum-schedule () activate)
+  (run-with-idle-timer 0.2 nil #'linum-update-current))
 
 ;; ファイルの末尾には必ず改行をいれる
 (setq require-final-newline t)
