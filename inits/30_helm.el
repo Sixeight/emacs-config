@@ -16,7 +16,7 @@
 
 (el-get-bundle helm-git-grep)
 (el-get-bundle! helm-ls-git
-  (setq helm-ls-git-fuzzy-match t))
+  (setq helm-ls-git-fuzzy-match nil))
 (el-get-bundle helm-ag)
 (el-get-bundle helm-open-github)
 ;; helm-swoop (https://github.com/ShingoFukuyama/helm-swoop)
