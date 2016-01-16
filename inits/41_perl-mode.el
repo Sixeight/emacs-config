@@ -5,6 +5,7 @@
 (setq auto-mode-alist (cons '("\\.cgi$" . cperl-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.psgi$" . cperl-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("cpanfile$" . cperl-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("^api.def$" . cperl-mode) auto-mode-alist))
 
 (add-hook 'cperl-mode-hook
           '(lambda ()
