@@ -11,6 +11,7 @@
 (el-get-bundle! helm
   (require 'helm-config)
   (require 'helm-files)
+  (helm-migemo-mode 1)
   (define-key helm-map (kbd "C-h") 'delete-backward-char)
   (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char))
 
@@ -28,8 +29,7 @@
   (setq helm-swoop-move-to-line-cycle t)
   (setq helm-swoop-use-line-number-face t)
   (define-key isearch-mode-map (kbd "C-o") 'helm-swoop-from-isearch)
-  (define-key helm-swoop-map (kbd "C-o") 'helm-multi-swoop-all-from-helm-swoop)
-  (helm-migemo-mode 1))
+  (define-key helm-swoop-map (kbd "C-o") 'helm-multi-swoop-all-from-helm-swoop))
 ;; helm-source-ghq を利用するのにrequireする
 (el-get-bundle! helm-ghq)
 
