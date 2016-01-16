@@ -132,6 +132,10 @@
 (when (boundp 'show-trailing-whitespace)
   (setq-default show-trailing-whitespace t))
 
+;; コマンド履歴などを覚えておく
+(el-get-bundle! session
+  (add-hook 'after-init-hook 'session-initialize))
+
 ;; yank した文字列をハイライト表示
 (when window-system
   (defadvice yank (after ys:highlight-string activate)
