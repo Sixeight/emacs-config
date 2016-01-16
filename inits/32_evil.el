@@ -53,6 +53,7 @@
   (define-key evil-normal-state-map (kbd "g 8") 'elscreen-jump)
   (define-key evil-normal-state-map (kbd "g 4") 'elscreen-jump-9)
   ;; insert state
+  (define-key evil-insert-state-map (kbd "C-j") 'evil-normal-state)
   (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
   (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
   (define-key evil-insert-state-map (kbd "C-n") 'next-line)
