@@ -1,6 +1,13 @@
 
 ;; helm (https://github.com/emacs-helm/helm)
 
+(require 'filecache)
+(file-cache-add-directory-list '("~/"
+                                 "~/.oh-my-zsh/custom"
+                                 "~/.emacs.d/"
+                                 "~/.emacs./inits/"
+                                 ))
+
 (el-get-bundle! helm
   (require 'helm-config)
   (require 'helm-files)
