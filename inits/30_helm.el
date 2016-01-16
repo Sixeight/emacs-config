@@ -40,7 +40,6 @@
                                helm-source-recentf
                                helm-source-file-cache
                                helm-source-files-in-current-dir
-                               helm-source-ghq
                                )))
 
 (global-set-key (kbd "C-:") 'helm-mini)
