@@ -8,9 +8,11 @@
               evil-cross-lines nil
               evil-echo-state nil
               evil-want-C-i-jump t
-              evil-want-fine-undo t
+              evil-want-fine-undo nil
               evil-want-C-w-in-emacs-state t
+              evil-ex-complete-emacs-commands t
               evil-search-module 'evil-search
+              evil-symbol-word-search t
               evil-ex-search-vim-style-regexp t)
 
 (el-get-bundle evil
@@ -27,10 +29,6 @@
   (define-key evil-normal-state-map (kbd "C-e") 'end-of-line)
   (define-key evil-normal-state-map (kbd "s-i") 'evil-indent-line)
   (define-key evil-normal-state-map (kbd "C-a") 'back-to-indentation)
-  (define-key evil-normal-state-map (kbd "C-w DEL") 'windmove-left)
-  (define-key evil-normal-state-map (kbd "C-w C-l") 'windmove-right)
-  (define-key evil-normal-state-map (kbd "C-w C-j") 'windmove-down)
-  (define-key evil-normal-state-map (kbd "C-w C-k") 'windmove-up)
   (define-key evil-normal-state-map (kbd "<C-return>") 'evil-ex-nohighlight)
   (defun find-tag-next ()
     (interactive)
@@ -58,7 +56,14 @@
   (define-key evil-normal-state-map (kbd "g 7") 'elscreen-jump)
   (define-key evil-normal-state-map (kbd "g 8") 'elscreen-jump)
   (define-key evil-normal-state-map (kbd "g 4") 'elscreen-jump-9)
-  ;; insert state
+  ;; window
+  (define-key evil-window-map (kbd "DEL") 'windmove-left)
+  (define-key evil-window-map (kbd "C-l") 'windmove-right)
+  (define-key evil-window-map (kbd "C-j") 'windmove-down)
+  (define-key evil-window-map (kbd "C-k") 'windmove-up)
+  ;; search
+  (define-key evil-ex-search-keymap (kbd "C-w") 'evil-delete-backward-word)
+  ;; insert stat
   (define-key evil-insert-state-map (kbd "C-j") 'evil-normal-state)
   (define-key evil-insert-state-map (kbd "C-h") 'delete-backward-char)
   (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
