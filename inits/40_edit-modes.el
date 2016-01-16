@@ -43,8 +43,9 @@
 
 
 ;; css/less/sass
-(el-get-bundle css-mode)
-(el-get-bundle less-css-mode)
+(add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
+(el-get-bundle less-css-mode
+  (add-to-list 'auto-mode-alist '("\\.less$" . less-css-mode)))
 (el-get-bundle scss-mode
   (add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode)))
 
