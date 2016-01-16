@@ -6,7 +6,7 @@
           '(lambda ()
              (progn
                (define-key cperl-mode-map (kbd "=") (smartchr '("=" "=>" "==")))
-               ;; (define-key cperl-mode-map (kbd "F") (smartchr '("F" "$" "$_" "$_->" "@$")))
+               (define-key cperl-mode-map (kbd "F") (smartchr '("F" "$" "@$")))
                ;; (define-key cperl-mode-map (kbd "M") (smartchr '("M" "my $`!!' = ")))
                (define-key cperl-mode-map (kbd "D") (smartchr '("D" "use Data::Dumper; warn Dumper(`!!');")))
                ;; (define-key cperl-mode-map (kbd "S") (smartchr '("S" "my ($self) = @_;" "my ($self, $`!!') = @_;")))
