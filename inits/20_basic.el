@@ -296,17 +296,15 @@
           (isearch-repeat-forward)))
     ad-do-it))
 
-;; highlight-symbol
+;; highlight-symbol (https://github.com/nschum/highlight-symbol.el)
 (el-get-bundle! highlight-symbol
   (setq highlight-symbol-idle-delay 0.5)
   (global-set-key (kbd "C-S-w") 'highlight-symbol)
   (global-set-key (kbd "<f3>") 'highlight-symbol-next)
   (global-set-key (kbd "S-<f3>") 'highlight-symbol-prev)
-  (global-set-key (kbd "C-S-s-w") 'highlight-symbol-remove-all))
-
-;; 全メジャーモードで自動ハイライト
-(add-hook 'after-change-major-mode-hook
-          'highlight-symbol-mode)
+  (global-set-key (kbd "C-S-s-w") 'highlight-symbol-remove-all)
+  ;; 全メジャーモードで自動ハイライト
+  (add-hook 'after-change-major-mode-hook 'highlight-symbol-mode))
 
 ;; popwin (https://github.com/m2ym/popwin-el)
 (el-get-bundle! popwin
