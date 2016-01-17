@@ -332,6 +332,11 @@
 (el-get-bundle! smartparens
   (require 'smartparens-config))
 
+;; dash-at-point (https://github.com/stanaka/dash-at-point)
+(el-get-bundle dash-at-point
+  (global-set-key (kbd "C-c d") 'dash-at-point)
+  (global-set-key (kbd "C-c e") 'dash-at-point-with-docset))
+
 ;: あんまり使いみちなかった
 ;; ace-window (https://github.com/abo-abo/ace-window)
 ;; (el-get-bundle! ace-window
