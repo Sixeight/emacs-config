@@ -72,7 +72,8 @@
   (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
   (define-key evil-insert-state-map (kbd "C-d") 'delete-forward-char)
   (define-key evil-insert-state-map (kbd "C-k") 'kill-line)
-
+  ;; motion state
+  (define-key evil-motion-state-map (kbd "C-z") nil)
   ;; via: http://d.hatena.ne.jp/tarao/20130304/evil_config
   (defun evil-swap-key (map key1 key2)
     ;; MAP中のKEY1とKEY2を入れ替え
