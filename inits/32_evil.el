@@ -116,10 +116,9 @@
   ;; (setq evil-jumper-auto-center t)
   (evil-jumper-mode  1))
 
-;; キーバインドで困ってない
 ;; evil-tabs (https://github.com/krisajenkins/evil-tabs)
-;; (el-get-bundle! evil-tabs
-;;   (global-evil-tabs-mode t))
+(el-get-bundle! evil-tabs
+  (global-evil-tabs-mode t))
 
 ;; normal stateに移行するときにIMEをオフにする
 ;; via: http://ichiroc.hatenablog.com/entry/2013/09/06/075832
