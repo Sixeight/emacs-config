@@ -66,6 +66,9 @@
 (define-key company-active-map (kbd "M-p") nil)
 (define-key company-active-map (kbd "C-h") nil)
 
+;; C-SPCで補完開始
+(global-set-key (kbd "C-SPC") 'company-complete)
+
 ;; C-iで展開
 (define-key company-active-map (kbd "C-i") 'company-complete-selection)
 
