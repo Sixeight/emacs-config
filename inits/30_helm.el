@@ -12,6 +12,8 @@
   (require 'helm-config)
   (require 'helm-files)
   (helm-migemo-mode 1)
+  (define-key helm-map (kbd "TAB") 'helm-execute-persistent-action)
+  (define-key helm-map (kbd "C-z") 'helm-select-action)
   (define-key helm-map (kbd "C-h") 'delete-backward-char)
   (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char))
 
