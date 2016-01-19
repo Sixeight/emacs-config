@@ -4,7 +4,7 @@
 ;; 初期設定
 (setq-default evil-want-C-u-scroll t
               evil-auto-indent t
-              evil-shift-width 2
+              evil-shift-width 4
               evil-cross-lines nil
               evil-echo-state nil
               evil-want-C-i-jump t
