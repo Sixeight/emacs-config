@@ -121,6 +121,8 @@
 (el-get-bundle! evil-tabs
   (global-evil-tabs-mode t))
 
+(el-get-bundle! evil-indent-textobject)
+
 ;; normal stateに移行するときにIMEをオフにする
 ;; via: http://ichiroc.hatenablog.com/entry/2013/09/06/075832
 (mac-set-input-method-parameter "com.google.inputmethod.Japanese.base" `title "あ")
