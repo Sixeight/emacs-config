@@ -17,6 +17,11 @@
   (define-key helm-map (kbd "C-h") 'delete-backward-char)
   (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char))
 
+(el-get-bundle syohex/emacs-helm-perldoc :name helm-perldoc
+  (eval-after-load "cperl-mode"
+  '(progn
+    (helm-perldoc:setup)))
+  (add-hook 'cperl-mode-hook 'helm-perldoc:carton-setup))
 (el-get-bundle helm-git-grep)
 (el-get-bundle! helm-ls-git)
 (el-get-bundle helm-ag)
