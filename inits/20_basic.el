@@ -315,6 +315,7 @@
   (push '("*perldoc*" :height 0.5) popwin:special-display-config)
   (push '("*Warnings*" :height 0.5) popwin:special-display-config)
   (push '("*Flycheck errors*" :height 0.5) popwin:special-display-config)
+  (push '("*compilation*" :height 0.5) popwin:special-display-config)
   (popwin-mode 1))
 
 ;; quickrun (https://github.com/syohex/emacs-quickrun)
