@@ -337,6 +337,11 @@
   (global-set-key (kbd "C-c d") 'dash-at-point)
   (global-set-key (kbd "C-c e") 'dash-at-point-with-docset))
 
+(el-get-bundle hiwin
+  (hiwin-activate)
+  ;; (set-face-background 'hiwin-face "#4F6169")
+  )
+
 ;: あんまり使いみちなかった
 ;; ace-window (https://github.com/abo-abo/ace-window)
 ;; (el-get-bundle! ace-window
