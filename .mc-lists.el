@@ -3,12 +3,17 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        cperl-electric-terminator
         evil-change
         evil-delete-backward-word
         evil-insert
+        evil-paste-before
+        helm-resume
+        keyboard-quit
         ))
 
 (setq mc/cmds-to-run-once
       '(
+        scroll-down-with-lines
         scroll-up-with-lines
         ))
