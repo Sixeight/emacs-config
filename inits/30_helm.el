@@ -49,11 +49,11 @@
                                helm-source-files-in-current-dir
                                )))
 
-(global-set-key (kbd "C-:") 'helm-mini)
+(global-set-key (kbd "C-'") 'helm-mini)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-c r") 'helm-ghq)
 (global-set-key (kbd "C-c l") 'helm-ls-git-ls)
-(global-set-key (kbd "C-'") 'helm-ls-git-ls)
+(global-set-key (kbd "C-:") 'helm-ls-git-ls)
 (global-set-key (kbd "C-c p") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c g") 'helm-git-grep)
 (global-set-key (kbd "C-c G") 'helm-git-grep-at-point)
