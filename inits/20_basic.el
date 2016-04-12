@@ -108,7 +108,7 @@
 (setq gc-cons-threshold (* 10 gc-cons-threshold))
 
 ;; status-barにカーソルのcolumn表示(4,29とか)
-(column-number-mode t)
+;; (column-number-mode t)
 
 ;;; status-barに時間表示
 (require 'time)
@@ -219,12 +219,12 @@
 (setq echo-keystrokes 0.1)
 
 ;; 行番号を(常に)表示する
-(require 'linum)
-(global-linum-mode 1)
-(setq linum-format "%4d ")
-(setq linum-delay t)
-(defadvice linum-schedule (around my-linum-schedule () activate)
-  (run-with-idle-timer 0.2 nil #'linum-update-current))
+;; (require 'linum)
+;; (global-linum-mode 1)
+;; (setq linum-format "%4d ")
+;; (setq linum-delay t)
+;; (defadvice linum-schedule (around my-linum-schedule () activate)
+;;   (run-with-idle-timer 0.2 nil #'linum-update-current))
 
 ;; ファイルの末尾には必ず改行をいれる
 (setq require-final-newline t)
