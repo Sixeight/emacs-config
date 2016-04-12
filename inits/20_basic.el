@@ -33,9 +33,32 @@
 (set-face-background 'region "tan4")
 
 ;; font
-(set-face-attribute 'default nil
-                    :family "Monaco"
-                    :height 136)
+(defun font-normal ()
+  (interactive)
+  (set-face-attribute 'default nil
+                      :family "Monaco"
+                      :height 136)
+  )
+(defun font-parepro ()
+  (interactive)
+  (set-face-attribute 'default nil
+                      :family "Monaco"
+                      :height 170)
+  )
+(defun font-big ()
+  (interactive)
+  (set-face-attribute 'default nil
+                      :family "Monaco"
+                      :height 200)
+  )
+(defun font-small ()
+  (interactive)
+  (set-face-attribute 'default nil
+                      :family "Monaco"
+                      :height 120)
+  )
+
+(font-normal)
 
 ;; 行間
 (setq-default line-spacing 0.05)
