@@ -125,6 +125,7 @@
 
 ;; normal stateに移行するときにIMEをオフにする
 ;; via: http://ichiroc.hatenablog.com/entry/2013/09/06/075832
+;; http://www.srcw.net/wiki/index.php?Homebrew%2Femacs
 (mac-set-input-method-parameter "com.google.inputmethod.Japanese.base" `title "あ")
 (add-hook 'evil-normal-state-entry-hook
           '(lambda ()
