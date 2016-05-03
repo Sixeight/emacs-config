@@ -20,7 +20,7 @@
 (add-hook 'ruby-mode-hook
           '(lambda ()
              (define-key ruby-mode-map (kbd "P") (smartchr '("P" "require pp; pp ")))
-             (define-key ruby-mode-map (kbd "=") (smartchr '("=" " => " "==")))
+             (define-key ruby-mode-map (kbd "=") (smartchr '("=" "==" "=>")))
              ))
 
 (add-hook 'js-mode-hook
