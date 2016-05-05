@@ -94,9 +94,10 @@
                         (:exec . ("PERL5LIB=lib:local/lib/perl5:$PERL5LIB %c -MTest::UsedModules -MTest::More -e 'used_modules_ok(\"%s\");done_testing()'"))))))
 
 ;; plenv
-(el-get-bundle plenv)
-(require 'plenv)
-(plenv-global "5.20.2")
+(el-get-bundle karupanerura/plenv.el
+  (require 'plenv)
+  (plenv-global "5.20.2")
+  )
 
 ;; flycheck
 ;; required: cpanm Project::Libs
